@@ -1,0 +1,81 @@
+<mvc:View 
+    controllerName="project1.controller.OverView"
+    xmlns:mvc="sap.ui.core.mvc" 
+    displayBlock="true"
+    xmlns="sap.m" 
+    xmlns:l="sap.ui.layout"
+	  xmlns:f="sap.ui.layout.form"
+	  xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+		<!-- <content>
+			<Button text="{i18n>helloButtonText}" press="onClickHelloButton" ></Button>
+		</content> -->
+        <VBox class="sapUiSmallMargin">
+		     <f:SimpleForm id="SimpleFormChange354"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="{i18n>info}"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="{i18n>project}" required="true"/>
+				<Input id="inputProject"/>
+				<Label text="{i18n>date}" />
+			    <DatePicker id="dateDatePicker" displayFormat="dd-MM-yyyy"></DatePicker>
+				<Label text="{i18n>expenseType}"/>
+				<Select id="selectExpenseType" change="onChangeExpenseType">
+					<items>
+					    <core:ListItem text="{i18n>food}" key="SelectKeyFood" icon="sap-icon://meal"/>
+						<core:ListItem text="{i18n>acc}" key="SelectKeyAcc"/>
+						<core:ListItem text="{i18n>trans}" key="SelectKeyTrans"/>
+					</items>
+				</Select>	
+				<Label text="{i18n>foodType}"/>
+				<Select id="selectFoodType">
+					<items>
+					    <core:Item text="{i18n>breakfast}" key="SelectKeyBF" />
+						<core:Item text="{i18n>lunch}" key="SelectKeyLunch"/>
+						<core:Item text="{i18n>dinner}" key="SelectKeyDinner"/>
+					</items>
+				</Select>
+				<Label text="{i18n>transportType}"/>
+				<Select id="selectTransType">
+					<items>
+					    <core:Item text="{i18n>bus}"    key="SelectKeyBus"/>
+						<core:Item text="{i18n>train}"  key="SelectKeyTrain"/>
+						<core:Item text="{i18n>flight}" key="SelectKeyFlight"/>
+					</items>
+				</Select>
+				<Label text="{i18n>totalExpense}"/>
+				<Input id="currencyType"/>
+				<Select id="selectCurrencyType">
+					<items>
+					    <core:Item text="{i18n>try}" key="SelectKeyTry"/>
+						<core:Item text="{i18n>usd}" key="SelectKeyUsd"/>
+						<core:Item text="{i18n>eur}" key="SelectKeyEur"/>
+					</items>
+				</Select>
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+          
+		<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button text="{i18n>reset}" type="Emphasized" icon="sap-icon://reset"/>
+				<Button text="{i18n>saveChanges}" type="Accept" icon="sap-icon://save"/>
+			</OverflowToolbar>
+		</footer>
+    </Page>
+</mvc:View>
